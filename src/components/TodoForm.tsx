@@ -21,11 +21,11 @@ const TodoForm: React.FC<PropTypes> = ({ setTodos }) => {
         onChange={(e) => setNewTodoText(e.target.value)}
         autoFocus={true}
         placeholder="Add a new task..."
-        className="rounded-l bg-slate-200 p-2 font-medium text-slate-950 outline-none"
+        className="rounded-l bg-indigo-100 p-2 font-medium text-indigo-500 outline-none"
       />
       <button
         onClick={handleAddTodo}
-        className="rounded-r bg-blue-500 px-4 py-2 font-medium text-white transition duration-300 ease-in-out hover:bg-blue-600"
+        className="rounded-r bg-purple-500 px-4 py-2 font-medium transition duration-300 ease-in-out hover:bg-purple-600"
       >
         Add
       </button>
