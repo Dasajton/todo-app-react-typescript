@@ -47,7 +47,7 @@ const TodoList = () => {
         <TodoForm setTodos={setTodos} />
       </div>
 
-      <ul className="container mx-auto flex flex-col gap-6 rounded-xl p-5 ">
+      <ul className="container mx-auto flex h-[70vh] flex-col gap-6 overflow-y-auto rounded-xl bg-indigo-300/20 p-5">
         {todos.length === 0 ? (
           <h1 className="text-center text-2xl font-medium">
             No Todos added, yet!
@@ -65,7 +65,7 @@ const TodoList = () => {
                     value={editedTodoText}
                     onChange={(e) => setEditedTodoText(e.target.value)}
                     autoFocus={true}
-                    className="w-3/4 rounded bg-teal-300 p-1 font-medium outline-none"
+                    className="w-5/6 rounded bg-teal-300 p-1 font-medium outline-none"
                   />
                   <div className="w-1/3 space-x-2 text-end">
                     <button onClick={() => handleEditSave(todo.id)}>
@@ -80,7 +80,7 @@ const TodoList = () => {
                   </div>
                 </div>
               ) : (
-                <div className="flex w-full items-center justify-between gap-4 p-2">
+                <div className="flex w-full items-center justify-between gap-4  p-2">
                   <p className="flex-1 text-lg font-medium">{todo.text}</p>
                   <div className="space-x-2">
                     <button onClick={() => handleEditStart(todo.id, todo.text)}>
